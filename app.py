@@ -13,7 +13,9 @@ col1, col2 = st.columns([1, 5])
 with col1:
     st.image("pdfbot.png")
 with col2:
-    st.markdown("<div style='text-align: center'><h1>PDF Bot</h1><div style='margin-top: 3px;'><p style='font-size: 24px; font-style: italic;'>AI-Powered Search</p><p style='font-size: 24px;'>For Any PDF</p></div></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-style: italic;'><h1>PDF Bot</h1><div style='margin-top: 1px;'><p style='font-size: 24px;'>AI-Powered Search For Any PDF</p></div></div>", unsafe_allow_html=True)
+
+
 
 
 uploaded_file = st.file_uploader("Upload any PDF and when processed you can ask any question about the document", type=["pdf"])
