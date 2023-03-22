@@ -15,7 +15,7 @@ with col1:
 with col2:
     st.markdown("<div style='text-align: center'><h1>PDF Bot</h1></div>", unsafe_allow_html=True)
 
-uploaded_file = st.file_uploader("Upload any PDF and ask questions about the document - powered  by OpenAI", type=["pdf"])
+uploaded_file = st.file_uploader("Upload any PDF ", type=["pdf"])
 
 if uploaded_file is not None:
     index = embed_text(parse_pdf(uploaded_file))
@@ -29,3 +29,10 @@ if uploaded_file is not None:
         st.write(f"Your results:", unsafe_allow_html=True)
         st.markdown(formatted_text, unsafe_allow_html=True)
 
+# Add footer
+footer_html = """
+    <div style="position: fixed; bottom: 0; width: 100%; background-color: #f5f5f5; text-align: center;">
+        <p>Made by <a href="mailto:kylelegare@gmail.com">Kyle Legare</a></p>
+    </div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
