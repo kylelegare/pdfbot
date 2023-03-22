@@ -31,7 +31,7 @@ if uploaded_file is not None:
 
 # Add footer
 footer_html = """
-    <div style="position: fixed; bottom: 0; width: 100%; background-color: #f5f5f5; text-align: center;">
+    <div style="position: fixed; bottom: 0; width: 100%; background-color: #f5f5f5; text-align: center; margin: auto;">
         <p>Made by <a href="mailto:kylelegare@gmail.com">Kyle Legare</a></p>
     </div>
 """
