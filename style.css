@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-left: 20px;
+}
+
+#pdfbot {
+    height: 50px;
+    margin-right: 20px;
+}
+
+#main {
+    margin-top: 20px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
