@@ -13,8 +13,9 @@ col1, col2 = st.columns([1, 4])
 with col1:
     st.image("pdfbot.png")
 with col2:
-    st.header("PDF Bot")
-uploaded_file = st.file_uploader("Upload any PDF and ask questions about the document", type=["pdf"])
+    st.markdown("<div style='text-align: center'><h1>PDF Bot</h1></div>", unsafe_allow_html=True)
+
+uploaded_file = st.file_uploader("Upload any PDF and ask questions about the document - powered  by OpenAI", type=["pdf"])
 
 if uploaded_file is not None:
     index = embed_text(parse_pdf(uploaded_file))
