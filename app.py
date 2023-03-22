@@ -11,7 +11,7 @@ st.markdown("""
 
 col1, col2 = st.columns([1, 4])
 with col1:
-    st.image("images/pdfbot.png")
+    st.image("pdfbot.png")
 with col2:
     st.header("PDF Bot")
 uploaded_file = st.file_uploader("Upload any PDF and ask questions about the document", type=["pdf"])
