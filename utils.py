@@ -23,8 +23,7 @@ chat = ChatOpenAI(temperature=0)
 #Set OpenAI API Key
 openai_api_key = st.secrets['OPENAI_API_KEY']
 
-
-@st.cache
+@st.cache_data
 def parse_pdf(file):
     pdf = PdfReader(file)
     output = []
@@ -35,7 +34,7 @@ def parse_pdf(file):
     return "\n\n".join(output)
 
 
-@st.cache
+@st.cache_data
 def embed_text(text):
     """Split the text and embed it in a FAISS vector store"""
     text_splitter = RecursiveCharacterTextSplitter(
@@ -53,6 +52,9 @@ def get_answer(index, query):
     system_template = "You are a helpful assistant analyzing a document someone gave you"
     messages = [
         SystemMessagePromptTemplate.from_template(system_template),
+        HumanMessagePromptTemplate.from_template("for the question below answer solely based on the provided context. If the context is irrelevant reply ‘I cannot answer based on the context of the document’ "),
+        HumanMessagePromptTemplate.from_template("Keep in mind the importance of clear and concise answers."),
+        HumanMessagePromptTemplate.from_template("Answer in an unbiased tone."),
         HumanMessagePromptTemplate.from_template("{context}"),
     ]
     prompt = ChatPromptTemplate.from_messages(messages)
