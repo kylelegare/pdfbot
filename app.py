@@ -20,7 +20,8 @@ with col2:
 
 
 uploaded_file = st.file_uploader("Upload any PDF and when processed you can ask any question about the document", type=["pdf"])
-st.write("This is small project and considered experimental, avoid sharing any sensitive information")
+st.write("<p style='font-size: small'>Note: This is small project and considered experimental, avoid sharing any sensitive information</p>", unsafe_allow_html=True)
+
 if uploaded_file is not None:
     index = embed_text(parse_pdf(uploaded_file))
     query = st.text_area("Ask a question about the document")
