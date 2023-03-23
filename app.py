@@ -13,7 +13,7 @@ col1, col2 = st.columns([1, 5])
 with col1:
     st.image("pdfbot.png")
 with col2:
-    st.markdown("<div style='text-align: center;'><h1>PDF Bot</h1><div style='margin-top: 1px;'><p style='font-size: 24px;'><em>AI Powered Q&A For Your Document</em></p></div></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center;'><h1>PDF Bot</h1><div style='margin-top: 1px;'><p style='font-size: 20px;'><em>AI Powered Q&A For Your Document</em></p></div></div>", unsafe_allow_html=True)
 
 
 
